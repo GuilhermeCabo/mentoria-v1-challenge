@@ -6,15 +6,17 @@ const app = express();
 
 Statement: List of all balance changes, like credit and debit (Extrato, in pt-br)
 
-customer = {
-  cpf: string;
-  name: string;
-  statement: {
+Statement = {
     description: string,
     amount: number,
     created_at: date,
     type: "credit" | "debit",
   }
+
+Customer = {
+  cpf: string;
+  name: string;
+  statement: Statement[]
 }
 
 */
